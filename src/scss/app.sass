@@ -1,0 +1,102 @@
+@import "bootstrap"
+
+html
+  min-height: 100%
+  border-radius: 0
+
+body
+  min-height: 100%
+  font-family: 'Source Sans Pro', sans-serif !important
+  font-size: 2em
+  background-image: url('../img/Cloudsky.jpg')
+  background-position: center;
+  background-size: cover
+  font-weight: 300
+  color: white
+  margin-bottom: 60px
+
+.top
+  margin-top: 20px
+
+.jumbo
+  display: none
+
+.hero
+  padding: 1.5em
+  img
+    background-color: white
+    border-radius: 50%
+    padding: 1.5rem
+
+.mid-content
+  padding-top: 5em
+  border-top: solid 1px #5E5E5E
+
+.day
+  img
+    background-color: white
+    border-radius: 50%
+    padding: 1.5rem
+
+.degs
+  padding: 0 1rem
+
+.container
+  .jumbotron
+    border-radius: 0
+    background-color: transparentize(#303030, 0.4)
+
+.form-control
+  border-radius: 0
+
+.form-control:focus
+  border: 2px solid #143073
+
+.secondary-content
+  height: 60px
+
+.footer
+  float: right
+  position: fixed
+  width: 100%
+  bottom: 0
+  height: 60px
+  background-color: honeydew
+  img
+    height: 50px
+  span
+    position: absolute
+    font-size: 0.5em
+    color: #424242
+    margin-top: 36px
+    margin-left: 20px
+
+@media screen and (max-width: 768px)
+  .day-name
+    position: relative
+    left: 125px
+    bottom: 58px
+  .degs
+    position: relative
+    left: 64px
+    bottom: -24px
+
+@media screen and (max-width: 442px)
+  .top
+    margin-top: 0
+    margin-left: 0
+    margin-right: 0
+    padding: 0
+  .day-name
+    font-size: .8em !important
+  .degs
+    font-size: .8em !important
+  .day-image
+    width: 60px
+  .footer-span
+    margin-top: 19px
+@media screen and (max-width: 442px)
+  .day-name
+    font-size: .8em !important
+  .degs
+    font-size: .8em !important
