@@ -14,7 +14,7 @@
   </head>
   <body ng-controller="myCtrl">
 
-    <div class="container top">
+    <div class="container top hidden">
       <div id="top" class="main-header jumbotron text-center">
 
         <div class="hero row" id="jumbo">
@@ -78,10 +78,12 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-3 text-right">Zip Code</div>
-        <div class="col-xs-6">
-          <input name="goTime" type="text" class="form-control" ng-model="zip" placeholder="97205" />
-        </div>
-        <button type="submit" ng-click="findWeather(zip)" class="btn btn-default">Change</button>
+        <form ng-submit="findWeather(zip)">
+          <div class="col-xs-6">
+            <input name="goTime" type="text" class="form-control" ng-model="zip" ng-submit="findWeather(zip)" placeholder="97205" />
+          </div>
+          <button type="submit" ng-click="findWeather(zip)" class="btn btn-default" name="goTime">Change</button>
+        </form>
       </div>
     </div>
 

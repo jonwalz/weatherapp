@@ -36,4 +36,5 @@ app.factory('weatherService', ['$http', '$q', function ($http, $q){
   };
 }]);
 
+
     // http://api.wunderground.com/api/319c728dc9a4ae57/features/settings/q/query.format

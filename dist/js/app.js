@@ -10344,12 +10344,12 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
-$(document).ready(function() {
-  $('#jumbo').on('load',function(){
-     $(this).fadeIn(3000);
-  });
+$(document).ready(function () {
+    $('div.hidden').fadeIn(2500).removeClass('hidden');
+
 });
 
+	
 'use strict';
 
 var app = angular.module('weatherApp', []);
@@ -10387,6 +10387,7 @@ app.factory('weatherService', ['$http', '$q', function ($http, $q){
     getWeather: getWeather
   };
 }]);
+
 
     // http://api.wunderground.com/api/319c728dc9a4ae57/features/settings/q/query.format
 
