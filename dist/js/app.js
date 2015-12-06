@@ -10346,10 +10346,7 @@ return jQuery;
 }));
 $(document).ready(function () {
     $('div.hidden').fadeIn(2500).removeClass('hidden');
-
 });
-
-	
 'use strict';
 
 var app = angular.module('weatherApp', []);

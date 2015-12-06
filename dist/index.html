@@ -39,11 +39,12 @@
               <div class="col-md-4 col-sm-4 day">
                 <div class="row">
                   <div class="col-xs-6">
-                    <img  class="day-image" src="{{place.forecast.txt_forecast.forecastday[1].icon_url}}" >
+                    <img class="day-image" src="{{place.forecast.txt_forecast.forecastday[1].icon_url}}" >
                     <p class="day-name">{{place.forecast.simpleforecast.forecastday[1].date.weekday}}</p>
                   </div>
-
-                  <span class="degs col-xs-3">{{place.forecast.simpleforecast.forecastday[1].high.fahrenheit}}°</span>
+                  <div class="flex">
+                    <span class="degs col-xs-3">{{place.forecast.simpleforecast.forecastday[1].high.fahrenheit}}°</span>
+                  </div>
                 </div>
               </div>
 
@@ -76,11 +77,11 @@
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row hidden">
         <div class="col-xs-3 text-right">Zip Code</div>
         <form ng-submit="findWeather(zip)">
           <div class="col-xs-6">
-            <input name="goTime" type="text" class="form-control" ng-model="zip" ng-submit="findWeather(zip)" placeholder="97205" />
+            <input name="goTime" type="text" class="form-control go-time" ng-model="zip" ng-submit="findWeather(zip)" placeholder="97205" />
           </div>
           <button type="submit" ng-click="findWeather(zip)" class="btn btn-default" name="goTime">Change</button>
         </form>

@@ -6,7 +6,8 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     maps = require('gulp-sourcemaps'),
-     del = require('del');
+     del = require('del'),
+  autoprefixer = require('gulp-autoprefixer');
 
 gulp.task("concatScripts",['compileSass'], function() {
     return gulp.src([
@@ -31,6 +32,7 @@ gulp.task('compileSass', function() {
   return gulp.src('src/scss/app.sass')
       .pipe(maps.init())
       .pipe(sass())
+      .pipe(autoprefixer())
       .pipe(maps.write('./'))
       .pipe(gulp.dest('dist/css'));
 });
@@ -38,6 +40,10 @@ gulp.task('compileSass', function() {
 gulp.task('watchSass', function() {
   gulp.watch('src/scss/**/app.sass', ['compileSass']);
 })
+
+gulp.task('clean-sass', function(){
+  del(['dist/css/app.css*']);
+});
 
 gulp.task('clean', function() {
   del(['dist/css/app.css*', 'dist/js/app.js*', 'js/app.min.js']);

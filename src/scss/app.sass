@@ -21,6 +21,9 @@ body
 .top
   margin-top: 20px
 
+.main-header
+  min-height: 530px
+
 .jumbo
   display: none
 
@@ -75,6 +78,7 @@ body
     margin-left: 20px
 
 @media screen and (max-width: 768px)
+
   .day-name
     position: relative
     left: 125px
@@ -85,21 +89,37 @@ body
     bottom: -24px
 
 @media screen and (max-width: 442px)
+
   .top
     margin-top: 0
     margin-left: 0
     margin-right: 0
     padding: 0
+
+  .main-header
+  min-height: 530px
+
   .day-name
+    left: 75px
     font-size: .8em !important
+
   .degs
     font-size: .8em !important
+
   .day-image
     width: 60px
+
   .footer-span
     margin-top: 19px
-@media screen and (max-width: 442px)
+
+@media screen and (max-width: 320px)
+  
+  .hero
+    font-size: .7em !important
+  
   .day-name
-    font-size: .8em !important
+    left: 75px
+    font-size: .5em !important
+
   .degs
-    font-size: .8em !important
+    font-size: .5em !important
